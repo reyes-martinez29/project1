@@ -201,6 +201,20 @@ pre code{
   box-shadow: none;
 }
 
+/* - -------------- - Step tag - ---------------- - */
+.tag{
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: .8rem;
+  margin-right: 8px;
+}
+
+
 
 
 
