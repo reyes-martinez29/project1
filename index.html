@@ -18,13 +18,45 @@
   </header>
 
   <main id="top">
-    <section class="section">
-      <div class="container">
-        <h1>Guía Visual de Git y GitHub</h1>
-        <p>Estamos construyendo esta página por secciones para practicar Git con commits pequeños.</p>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Aprende Git y GitHub<br><span class="muted">con una guía visual paso a paso</span></h1>
+        <p class="lead">
+          Comandos esenciales, ejemplos reales y un flujo de trabajo para usar Git como profesional.
+          Construimos esta página por secciones para practicar Git con commits pequeños.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#flujo">Empezar por el flujo básico</a>
+          <a class="btn btn-ghost" href="#cheatsheet">Ir al cheatsheet</a>
+        </div>
       </div>
-    </section>
-  </main>
+
+      <div class="hero-card">
+        <h2>Flujo típico</h2>
+        <ol class="steps">
+          <li>Editar archivos</li>
+          <li><code>git status</code></li>
+          <li><code>git add .</code></li>
+          <li><code>git commit -m "..."</code></li>
+          <li><code>git push</code></li>
+        </ol>
+        <p class="small muted">Tip: si algo sale mal, revisa primero <code>git status</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container panel">
+      <h2>Siguiente sección</h2>
+      <p>
+        En la siguiente etapa agregaremos el menú con anclas y la sección de introducción.
+      </p>
+    </div>
+  </section>
+</main>
+
 
   <footer class="site-footer">
     <div class="container footer-inner">
