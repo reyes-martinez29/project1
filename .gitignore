@@ -1,3 +1,5 @@
 *.class
 *.zip
 *.ex
+*.log
+.DS_Store
