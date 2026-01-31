@@ -172,5 +172,35 @@ pre code{
   margin: 8px 0;
 }
 
+/* --------------------------- - Buttons - ------------------------- - */
+.hero-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #111;
+  color: #fff;
+  background: #111;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+}
+
+.btn-ghost{
+  background: transparent;
+  color: #111;
+  box-shadow: none;
+}
+
+
 
 
