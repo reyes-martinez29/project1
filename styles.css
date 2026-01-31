@@ -214,6 +214,36 @@ pre code{
   margin-right: 8px;
 }
 
+/* - ----------------- - Callouts - --------------- */
+.callouts{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.callout{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.callout h3{
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+}
+
+.callout ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.callout p{
+  margin: 0;
+  color: var(--muted);
+}
+
+
 
 
 
