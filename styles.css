@@ -1,0 +1,28 @@
+/* Base / Reset */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root{
+  --bg: #ffffff;
+  --bg-alt: #f6f7fb;
+  --text: #111;
+  --muted: #555;
+  --border: #e5e7eb;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
+  --radius: 16px;
+  --container: 1100px;
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container{
+  width: min(92vw, var(--container));
+  margin: 0 auto;
+}
+
+.muted{ color: var(--muted); }
