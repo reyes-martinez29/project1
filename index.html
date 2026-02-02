@@ -551,6 +551,33 @@
           </p>
         </div>
       </div>
+
+      <div class="panel">
+        <h3>Subir cambios (push)</h3>
+        <pre><code># Primera vez que subes una rama
+        git push -u origin nombre_rama
+
+        # Después
+        git push</code></pre>
+
+        <p>
+          La opción <code>-u</code> guarda la relación entre tu rama local y la rama remota
+          (upstream), para que después solo necesites <code>git push</code>.
+        </p>
+
+        <h3>Bajar cambios (pull)</h3>
+        <pre><code>git pull</code></pre>
+
+        <p class="small muted">
+          <code>git pull</code> equivale a: traer cambios + hacer merge.
+        </p>
+
+        <div class="note">
+          <strong>Regla práctica:</strong> antes de empezar a trabajar,
+          haz <code>git switch main</code> y <code>git pull</code>.
+        </div>
+      </div>
+
     </div>
   </section>
 
