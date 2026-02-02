@@ -334,6 +334,27 @@ pre{
   margin-left: 6px;
 }
 
+.cheat-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.cheat{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+@media (max-width: 900px){
+  .cheat-grid{ grid-template-columns: 1fr; }
+}
+.cheat h3{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
 
 
 
