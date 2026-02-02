@@ -177,8 +177,8 @@
             (ahí vive todo el historial).
           </p>
           <p class="small muted">
-  Si copias solo la carpeta <code>.git</code>, en realidad estás copiando el historial y referencias.
-  Con eso puedes reconstruir el proyecto si tienes los objetos necesarios.
+            Si copias solo la carpeta <code>.git</code>, en realidad estás copiando el historial y referencias.
+            Con eso puedes reconstruir el proyecto si tienes los objetos necesarios.
           </p>
 
           <pre><code>git init</code></pre>
@@ -245,6 +245,32 @@
 
     </div>
   </section>
+
+  <section id="historial" class="section alt">
+    <div class="container">
+      <h2>4) Historial y comparación de cambios</h2>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Ver historial</h3>
+          <p>El historial te dice qué se hizo y en qué orden.</p>
+          <pre><code>git log
+           git log --oneline</code></pre>
+        </div>
+
+        <div class="panel">
+          <h3>Ver diferencias</h3>
+          <p>Compara tus cambios antes de commitear (esto evita errores).</p>
+          <pre><code># Cambios NO stageados
+          git diff
+
+            # Cambios YA stageados
+            git diff --staged</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
 
