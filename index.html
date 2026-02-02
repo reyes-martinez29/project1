@@ -673,6 +673,64 @@
     </div>
   </section>
 
+  <section id="buenas" class="section">
+    <div class="container">
+      <h2>9) Buenas prácticas (y cómo salvarte cuando algo sale mal)</h2>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Buenas prácticas</h3>
+          <ul>
+            <li>Commits pequeños y mensajes claros (una idea por commit)</li>
+            <li>Trabajar con ramas y PRs, no directo en <code>main</code></li>
+            <li>Revisar <code>git diff</code> antes de commitear</li>
+            <li>Hacer <code>git pull</code> en <code>main</code> antes de empezar a trabajar</li>
+            <li>Preferir <code>git revert</code> si el commit ya está en remoto</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Errores comunes</h3>
+          <ul>
+            <li>Mensajes tipo “update” / “fix” sin contexto</li>
+            <li>Commits gigantes mezclando muchas cosas</li>
+            <li>Olvidar en qué rama estás y pushear a otra</li>
+            <li>No revisar el estado del repo antes de actuar</li>
+            <li>Resolver conflictos “a ciegas” sin probar</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Checklist de diagnóstico rápido</h3>
+        <pre><code># ¿Qué cambió y dónde estoy?
+        git status
+        git branch --show-current
+
+        # ¿Qué modifiqué exactamente?
+        git diff
+
+        # ¿Qué commits hice?
+        git log --oneline</code></pre>
+
+        <h3>Recuperación segura (lo más usado)</h3>
+        <pre><code># Descartar cambios locales (antes de commit)
+        git restore index.html
+
+        # Quitar del stage pero conservar cambios
+        git restore --staged index.html
+
+        # Deshacer un commit ya publicado (seguro)
+        git revert &lt;hash&gt;</code></pre>
+
+        <div class="note">
+          <strong>Regla:</strong> si ya hiciste push, mejor <code>revert</code>. Evita reescribir historia compartida.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
 
 
