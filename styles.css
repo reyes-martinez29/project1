@@ -300,6 +300,25 @@ pre{
   -webkit-overflow-scrolling: touch;
 }
 
+/* - ----------------- - Flow list (recipe)  - ----------------- -*/
+.flow{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.flow li{
+  margin: 10px 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flow li code{
+  margin-left: 6px;
+}
+
+
 
 
 
