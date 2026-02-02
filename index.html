@@ -165,6 +165,88 @@
     </div>
   </section> 
 
+  <section id="flujo" class="section">
+    <div class="container">
+      <h2>3) Flujo básico: init → add → commit</h2>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Crear un repositorio</h3>
+          <p>
+            Esto inicializa Git en la carpeta actual y crea la carpeta <code>.git</code>
+            (ahí vive todo el historial).
+          </p>
+          <p class="small muted">
+  Si copias solo la carpeta <code>.git</code>, en realidad estás copiando el historial y referencias.
+  Con eso puedes reconstruir el proyecto si tienes los objetos necesarios.
+          </p>
+
+          <pre><code>git init</code></pre>
+        </div>
+
+        <div class="panel">
+          <h3>Ver estado</h3>
+          <p>
+            Te dice qué archivos cambiaron, cuáles están listos para commit y cuáles no.
+          </p>
+          <pre><code>git status</code></pre>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Stage: preparar cambios</h3>
+        <p>
+          El “stage” es una bandeja donde eliges qué entra al siguiente commit.
+          Útil si hiciste varios cambios pero quieres commitearlos por separado.
+        </p>
+
+        <pre><code># Agregar todo
+          git add .
+
+          # Agregar un archivo específico
+          git add index.html
+
+          # Agregar varios archivos
+          git add index.html styles.css</code></pre>
+      </div>
+      <div class="panel">
+        <h3>Crear un commit</h3>
+        <p>
+          Un commit debe representar una idea clara. Evita mensajes vagos como “update”.
+          Mejor: qué hiciste y por qué.
+        </p>
+
+        <pre><code>git commit -m "feat: add workflow section"</code></pre>
+
+        <h4>Ejemplos de buenos mensajes</h4>
+        <ul>
+          <li><code>feat: add intro section</code></li>
+          <li><code>style: improve hero responsive layout</code></li>
+          <li><code>fix: correct anchor ids in navbar</code></li>
+          <li><code>docs: update README with usage</code></li>
+        </ul>
+      </div>
+
+      <div class="note">
+        <strong>Receta rápida:</strong>
+        <pre><code># 1) ver qué cambió
+        git status
+
+        # 2) revisar diferencias (opcional pero recomendado)
+        git diff
+
+        # 3) preparar cambios
+        git add .
+
+        # 4) crear commit
+        git commit -m "feat: describe your change"</code></pre>
+      </div>
+
+
+
+    </div>
+  </section>
+
+
 
   <section class="section">
     <div class="container panel">

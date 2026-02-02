@@ -8,6 +8,7 @@ html, body { margin: 0; padding: 0; }
   .grid-2{ grid-template-columns: 1fr; }
   .nav{ gap: 8px; }
   .nav a{ padding: 6px 8px; }
+  pre{ padding: 12px; }
 }
 
 
@@ -105,13 +106,23 @@ body{
   flex-wrap: wrap;
 }
 
-/* Panels + code */
+/* -----------------  Panels + code  --------------------*/
 .panel{
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px;
   box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+
+.panel h4{
+  margin: 12px 0 8px;
+  font-size: 1rem;
+}
+
+.panel ul{
+  margin: 0;
+  padding-left: 18px;
 }
 
 code{
@@ -273,6 +284,10 @@ html{
 /* Para que el header sticky no tape los títulos al navegar con anclas */
 .section{
   scroll-margin-top: 90px;
+}
+
+pre{
+  -webkit-overflow-scrolling: touch;
 }
 
 
