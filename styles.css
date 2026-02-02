@@ -85,6 +85,13 @@ body{
   padding: 34px 0;
 }
 
+.section.alt{
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+
 .site-footer{
   border-top: 1px solid var(--border);
   padding: 18px 0;
