@@ -511,6 +511,105 @@
   </section>
 
 
+  <section id="remotos" class="section">
+    <div class="container">
+      <h2>7) GitHub y repositorios remotos</h2>
+
+      <div class="panel">
+        <p>
+          Un <strong>repositorio remoto</strong> es una copia de tu proyecto alojada en un servidor
+          (por ejemplo, GitHub). Sirve para respaldo, colaboración y revisión de código.
+        </p>
+
+        <div class="note">
+          <strong>Idea clave:</strong> local = tu computadora · remoto = GitHub.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Clonar un repositorio</h3>
+          <p>
+            Copia un repositorio remoto a tu máquina con todo su historial.
+          </p>
+          <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+
+          <p class="small muted">
+            Esto ya deja configurado el remoto <code>origin</code>.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Ver remotos</h3>
+          <pre><code>git remote -v</code></pre>
+
+          <h3>Agregar un remoto</h3>
+          <pre><code>git remote add origin https://github.com/usuario/repositorio.git</code></pre>
+
+          <p class="small muted">
+            Normalmente solo hay un remoto: <code>origin</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Subir cambios (push)</h3>
+        <pre><code># Primera vez que subes una rama
+        git push -u origin nombre_rama
+
+        # Después
+        git push</code></pre>
+
+        <p>
+          La opción <code>-u</code> guarda la relación entre tu rama local y la rama remota
+          (upstream), para que después solo necesites <code>git push</code>.
+        </p>
+
+        <h3>Bajar cambios (pull)</h3>
+        <pre><code>git pull</code></pre>
+
+        <p class="small muted">
+          <code>git pull</code> equivale a: traer cambios + hacer merge.
+        </p>
+
+        <div class="note">
+          <strong>Regla práctica:</strong> antes de empezar a trabajar,
+          haz <code>git switch main</code> y <code>git pull</code>.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Problemas comunes y soluciones</h3>
+
+        <h4>“Everything up-to-date”</h4>
+        <p>
+          No hay nada nuevo que subir en esa rama, o estás intentando hacer push a otra rama.
+        </p>
+
+        <h4>“Rejected – non-fast-forward”</h4>
+        <pre><code># Solución común
+          git pull
+          git push</code></pre>
+
+        <h4>Me equivoqué de rama al hacer push</h4>
+        <pre><code># Ver rama actual
+          git branch --show-current
+
+          # Subir la rama correcta
+          git push -u origin nombre_rama</code></pre>
+
+        <div class="note">
+          <strong>Tip:</strong> la mayoría de problemas con GitHub se resuelven revisando
+          <code>git status</code> y <code>git branch</code>.
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
 
 
 
