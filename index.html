@@ -578,6 +578,33 @@
         </div>
       </div>
 
+      <div class="panel">
+        <h3>Problemas comunes y soluciones</h3>
+
+        <h4>“Everything up-to-date”</h4>
+        <p>
+          No hay nada nuevo que subir en esa rama, o estás intentando hacer push a otra rama.
+        </p>
+
+        <h4>“Rejected – non-fast-forward”</h4>
+        <pre><code># Solución común
+          git pull
+          git push</code></pre>
+
+        <h4>Me equivoqué de rama al hacer push</h4>
+        <pre><code># Ver rama actual
+          git branch --show-current
+
+          # Subir la rama correcta
+          git push -u origin nombre_rama</code></pre>
+
+        <div class="note">
+          <strong>Tip:</strong> la mayoría de problemas con GitHub se resuelven revisando
+          <code>git status</code> y <code>git branch</code>.
+        </div>
+      </div>
+
+
     </div>
   </section>
 
