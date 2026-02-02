@@ -418,6 +418,77 @@
   </section>
 
 
+  <section id="merge" class="section alt">
+    <div class="container">
+      <h2>6) Merge y conflictos</h2>
+
+      <div class="panel">
+        <p>
+          <strong>Merge</strong> significa integrar cambios de una rama a otra (normalmente a <code>main</code>).
+          En GitHub casi siempre lo haces mediante un Pull Request. En local, también puedes hacerlo con
+          <code>git merge</code>.
+        </p>
+        <div class="note">
+          <strong>Idea:</strong> Merge no es “copiar y pegar”, es unir dos historias de commits.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Merge en local (cuando aplica)</h3>
+          <pre><code># Estar en main y actualizado
+          git switch main
+          git pull
+
+          # Integrar una rama
+          git merge nombre_rama</code></pre>
+
+          <p class="small muted">
+            En este proyecto nosotros hacemos el merge en GitHub, y luego <code>git pull</code> en local para sincronizar.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>¿Qué es un conflicto?</h3>
+          <p>
+            Un conflicto ocurre cuando dos ramas modifican la <strong>misma parte</strong> del mismo archivo y Git no sabe cuál elegir.
+            Tú decides manualmente la versión final.
+          </p>
+          <pre><code># Cuando hay conflicto, Git te lo dirá al intentar mergear
+          git merge nombre_rama</code></pre>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Resolver conflictos (paso a paso)</h3>
+        <ol class="flow">
+          <li><span class="tag">1</span> Ejecuta <code>git status</code> para ver archivos en conflicto</li>
+          <li><span class="tag">2</span> Abre el archivo y busca marcadores: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code></li>
+          <li><span class="tag">3</span> Decide qué líneas se quedan (puede ser una mezcla)</li>
+          <li><span class="tag">4</span> Guarda el archivo sin los marcadores</li>
+          <li><span class="tag">5</span> Marca resuelto: <code>git add archivo</code></li>
+          <li><span class="tag">6</span> Termina: <code>git commit</code></li>
+        </ol>
+
+        <pre><code># Ejemplo típico al terminar de resolver:
+        git add index.html
+        git commit -m "fix: resolve merge conflict in navbar"</code></pre>
+      </div>
+
+      <div class="panel">
+        <h3>Consejos para evitar conflictos</h3>
+        <ul>
+          <li>Haz ramas pequeñas y PRs pequeños</li>
+          <li>Sincroniza seguido: <code>git switch main</code> + <code>git pull</code></li>
+          <li>Evita editar el mismo bloque de texto entre varias ramas</li>
+          <li>Usa commits claros: facilitan rastrear qué cambio causó el problema</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
 
 
   <section class="section">
