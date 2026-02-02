@@ -177,8 +177,8 @@
             (ahí vive todo el historial).
           </p>
           <p class="small muted">
-  Si copias solo la carpeta <code>.git</code>, en realidad estás copiando el historial y referencias.
-  Con eso puedes reconstruir el proyecto si tienes los objetos necesarios.
+            Si copias solo la carpeta <code>.git</code>, en realidad estás copiando el historial y referencias.
+            Con eso puedes reconstruir el proyecto si tienes los objetos necesarios.
           </p>
 
           <pre><code>git init</code></pre>
@@ -245,6 +245,77 @@
 
     </div>
   </section>
+
+  <section id="historial" class="section alt">
+    <div class="container">
+      <h2>4) Historial y comparación de cambios</h2>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Ver historial</h3>
+          <p>El historial te dice qué se hizo y en qué orden.</p>
+          <pre><code>git log
+           git log --oneline</code></pre>
+        </div>
+
+        <div class="panel">
+          <h3>Ver diferencias</h3>
+          <p>Compara tus cambios antes de commitear (esto evita errores).</p>
+          <pre><code># Cambios NO stageados
+          git diff
+
+            # Cambios YA stageados
+            git diff --staged</code></pre>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Ver un commit específico</h3>
+        <p>
+          <code>git show</code> es ideal para inspeccionar qué cambió en un commit: archivos tocados y diferencias.
+        </p>
+        <pre><code>git show &lt;hash&gt;</code></pre>
+
+        <p class="small muted">
+          Tip: el <code>&lt;hash&gt;</code> lo copias de <code>git log --oneline</code>.
+        </p>
+      </div>
+
+      <p class="small muted">
+        Si configuraste el alias <code>lg</code>, úsalo para ver ramas y commits en forma de gráfico.
+      </p>
+      <pre><code>git lg</code></pre>
+
+      <div class="panel">
+        <h3>Diferencias por archivo (útil en proyectos grandes)</h3>
+        <pre><code># Solo un archivo
+        git diff -- index.html
+
+        # Comparar tu estado actual contra el último commit
+        git diff HEAD</code></pre>
+
+        <div class="note">
+          <strong>Regla:</strong> antes de hacer commit, revisa <code>git diff</code>. Te ahorra tiempo y errores.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Checklist cuando “algo salió mal”</h3>
+        <ul>
+          <li><code>git status</code> — ¿qué cambió?</li>
+          <li><code>git diff</code> — ¿qué líneas cambiaste?</li>
+          <li><code>git log --oneline</code> — ¿qué commits hiciste?</li>
+          <li><code>git show &lt;hash&gt;</code> — ¿qué contiene ese commit?</li>
+        </ul>
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+
 
 
 
