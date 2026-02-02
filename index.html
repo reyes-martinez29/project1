@@ -511,6 +511,51 @@
   </section>
 
 
+  <section id="remotos" class="section">
+    <div class="container">
+      <h2>7) GitHub y repositorios remotos</h2>
+
+      <div class="panel">
+        <p>
+          Un <strong>repositorio remoto</strong> es una copia de tu proyecto alojada en un servidor
+          (por ejemplo, GitHub). Sirve para respaldo, colaboración y revisión de código.
+        </p>
+
+        <div class="note">
+          <strong>Idea clave:</strong> local = tu computadora · remoto = GitHub.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Clonar un repositorio</h3>
+          <p>
+            Copia un repositorio remoto a tu máquina con todo su historial.
+          </p>
+          <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+
+          <p class="small muted">
+            Esto ya deja configurado el remoto <code>origin</code>.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Ver remotos</h3>
+          <pre><code>git remote -v</code></pre>
+
+          <h3>Agregar un remoto</h3>
+          <pre><code>git remote add origin https://github.com/usuario/repositorio.git</code></pre>
+
+          <p class="small muted">
+            Normalmente solo hay un remoto: <code>origin</code>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
 
 
 
