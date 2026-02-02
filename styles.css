@@ -256,6 +256,16 @@ pre code{
   gap: 14px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+/* Para que el header sticky no tape los títulos al navegar con anclas */
+.section{
+  scroll-margin-top: 90px;
+}
+
+
 
 
 
