@@ -46,6 +46,13 @@ No requiere instalación ni dependencias.
    git clone https://github.com/usuario/git-guia-web.git
 2. Abre el archivo index.html en tu navegador.
 
+## 🌐 Demo en vivo
+
+La guía está disponible públicamente en:
+
+https://reyes-martinez29.github.io/project1/
+
+
 ## Flujo de trabajo usado en el proyecto
 
 Este proyecto se desarrolló siguiendo un flujo realista y profesional de Git y GitHub:
