@@ -135,6 +135,22 @@ body{
   padding-left: 18px;
 }
 
+/* Notes inside panels */
+.panel .note{
+  margin-top: 12px;
+}
+
+/* Make ordered lists inside panels look cleaner */
+.panel ol{
+  margin: 0;
+  padding-left: 0;
+}
+
+.panel ol li{
+  margin: 10px 0;
+}
+
+
 code{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: .95em;
