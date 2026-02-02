@@ -5,6 +5,9 @@ html, body { margin: 0; padding: 0; }
 @media (max-width: 900px){
   .hero-grid{ grid-template-columns: 1fr; }
   .callouts{ grid-template-columns: 1fr; }
+  .grid-2{ grid-template-columns: 1fr; }
+  .nav{ gap: 8px; }
+  .nav a{ padding: 6px 8px; }
 }
 
 
