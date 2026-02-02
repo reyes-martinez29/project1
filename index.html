@@ -309,12 +309,84 @@
         </ul>
       </div>
 
-
-
-
-
     </div>
   </section>
+
+  <section id="ramas" class="section">
+    <div class="container">
+      <h2>5) Ramas: trabajar sin romper main</h2>
+
+      <div class="panel">
+        <p>
+          Una rama es una línea de trabajo paralela. Te permite implementar cambios sin afectar lo estable.
+          En la práctica: <strong>main</strong> debería representar algo que “compila / funciona”, y las ramas se usan
+          para desarrollar features, fixes o documentación.
+        </p>
+
+        <div class="note">
+          <strong>Idea:</strong> “Rama = experimento seguro”. Si sale bien, lo integras. Si sale mal, la borras.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Comandos esenciales</h3>
+          <pre><code># Ver ramas
+            git branch
+
+            # Crear y cambiar a una rama nueva
+            git switch -c ramas
+
+            # Cambiar entre ramas
+            git switch main
+            git switch ramas</code></pre>
+
+          <h3>Publicar rama en GitHub</h3>
+          <pre><code>git push -u origin ramas</code></pre>
+        </div>
+
+        <div class="panel">
+          <h3>Nombres recomendados</h3>
+          <p>Como tú quieres ramas simples, usa nombres cortos y claros:</p>
+          <ul>
+            <li><code>ramas</code>, <code>merge</code>, <code>github</code>, <code>prs</code></li>
+            <li><code>fix-navbar</code>, <code>mejoras-css</code>, <code>cheatsheet</code></li>
+          </ul>
+
+          <h3>Borrar ramas</h3>
+          <pre><code># Borrar rama local (cuando ya se integró)
+          git branch -d ramas
+
+          # Forzar borrado (si ya mergeaste pero Git no lo detecta)
+          git branch -D ramas</code></pre>
+
+          <p class="small muted">
+            Borrar ramas no borra tu historia en <code>main</code>. Solo limpia el espacio de trabajo.
+          </p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>¿Qué pasa si te equivocas de rama?</h3>
+        <pre><code># Ver en qué rama estás
+        git branch --show-current
+
+        # Guardar cambios sin commitear (temporal)
+        git stash
+
+        # Cambiar a la rama correcta
+        git switch main
+
+        # Recuperar tus cambios
+        git stash pop</code></pre>
+
+        <p class="small muted">
+          Usa <code>stash</code> cuando necesitas moverte rápido sin ensuciar commits. Si el cambio ya es “real”, mejor commitea.
+        </p>
+      </div>
+    </div>
+  </section>
+
 
 
 
