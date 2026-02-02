@@ -9,6 +9,7 @@ html, body { margin: 0; padding: 0; }
   .nav{ gap: 8px; }
   .nav a{ padding: 6px 8px; }
   pre{ padding: 12px; }
+  
 }
 
 
@@ -63,10 +64,15 @@ body{
 }
 
 .nav{
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
+
+.nav a{
+  display: inline-block;
+}
+
 
 .nav a{
   text-decoration: none;
@@ -299,9 +305,10 @@ pre code{
 /* - ----------------- - Grid - --------------- */
 .grid-2{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 14px;
 }
+
 
 html{
   scroll-behavior: smooth;
@@ -314,6 +321,7 @@ html{
 
 pre{
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 /* - ----------------- - Flow list (recipe)  - ----------------- -*/
@@ -332,6 +340,27 @@ pre{
 
 .flow li code{
   margin-left: 6px;
+}
+
+.cheat-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.cheat{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+@media (max-width: 900px){
+  .cheat-grid{ grid-template-columns: 1fr; }
+}
+.cheat h3{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
 }
 
 
