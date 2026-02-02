@@ -286,6 +286,20 @@
       </p>
       <pre><code>git lg</code></pre>
 
+      <div class="panel">
+        <h3>Diferencias por archivo (útil en proyectos grandes)</h3>
+        <pre><code># Solo un archivo
+        git diff -- index.html
+
+        # Comparar tu estado actual contra el último commit
+        git diff HEAD</code></pre>
+
+        <div class="note">
+          <strong>Regla:</strong> antes de hacer commit, revisa <code>git diff</code>. Te ahorra tiempo y errores.
+        </div>
+      </div>
+
+
 
 
     </div>
