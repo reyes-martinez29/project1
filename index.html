@@ -115,6 +115,56 @@
     </div>
   </section>
 
+  <section id="instalacion" class="section alt">
+    <div class="container">
+      <h2>2) Instalación y configuración inicial</h2>
+
+      <div class="panel">
+        <p>
+          Antes de usar Git en serio, configura tu identidad (nombre y correo). Eso se guarda dentro de cada commit.
+          Después, verifica que Git esté instalado y aprende 2–3 atajos útiles.
+        </p>
+
+        <h3>Configurar nombre y correo</h3>
+        <p>Esto firma tus commits. Hazlo una vez.</p>
+        <pre><code>git config --global user.name "Tu Nombre"
+        git config --global user.email "tu_correo@ejemplo.com"</code></pre>
+
+        <h3>Verificar tu configuración</h3>
+        <pre><code>git config --list</code></pre>
+
+        <h3>Config útil (opcional)</h3>
+        <pre><code># Editor para mensajes de commit (VS Code)
+        git config --global core.editor "code --wait"
+
+        # Log bonito (atajo)
+        git config --global alias.lg "log --oneline --decorate --graph --all"
+
+        # Comprobar tu alias
+        git lg</code></pre>
+
+        <p class="small muted">
+          Un alias es solo un atajo para un comando largo. Si algo no te funciona, ejecuta el comando completo.
+        </p>
+
+
+      </div>
+      <div class="panel">
+        <h3>Comprobar instalación</h3>
+        <pre><code>git --version</code></pre>
+
+        <h3>Ayuda rápida</h3>
+        <pre><code>git --help git 
+        help commit</code></pre>
+
+        <div class="note">
+          <strong>Tip:</strong> si estás en WSL, Git normalmente ya viene instalado o se instala con el gestor de paquetes.
+        </div>
+      </div>
+
+    </div>
+  </section> 
+
 
   <section class="section">
     <div class="container panel">
