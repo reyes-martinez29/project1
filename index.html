@@ -131,6 +131,21 @@
         <h3>Verificar tu configuración</h3>
         <pre><code>git config --list</code></pre>
 
+        <h3>Config útil (opcional)</h3>
+        <pre><code># Editor para mensajes de commit (VS Code)
+        git config --global core.editor "code --wait"
+
+        # Log bonito (atajo)
+        git config --global alias.lg "log --oneline --decorate --graph --all"
+
+        # Comprobar tu alias
+        git lg</code></pre>
+
+        <p class="small muted">
+          Un alias es solo un atajo para un comando largo. Si algo no te funciona, ejecuta el comando completo.
+        </p>
+
+
       </div>
     </div>
   </section>
