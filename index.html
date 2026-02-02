@@ -484,6 +484,29 @@
           <li>Usa commits claros: facilitan rastrear qué cambio causó el problema</li>
         </ul>
       </div>
+
+      <div class="panel">
+        <h3>Deshacer cambios (sin destruir tu repo)</h3>
+        <p>
+          Cuando algo sale mal, lo importante es elegir la herramienta correcta. Aquí va lo más usado en proyectos reales:
+        </p>
+
+        <pre><code># 1) Descartar cambios locales en un archivo (ANTES de commit)
+        git restore index.html
+
+        # 2) Quitar del stage pero conservar cambios
+        git restore --staged index.html
+
+        # 3) Deshacer un commit creando otro commit "inverso" (seguro para repos compartidos)
+        git revert &lt;hash&gt;</code></pre>
+
+        <div class="note">
+          <strong>Regla práctica:</strong> si ya subiste el commit a GitHub, usa <code>git revert</code>.
+          Evita <code>git reset</code> para no reescribir historia compartida.
+        </div>
+      </div>
+
+
     </div>
   </section>
 
